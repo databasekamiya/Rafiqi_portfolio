@@ -12,315 +12,374 @@
   <meta name="keywords" content="WhatsApp bot, developer, web developer, frontend, remaja, portofolio">
   <meta property="og:title" content="Portofolio Rafiqi Khairun Naz">
   <meta property="og:description" content="Developer Script WhatsApp dan Web Frontend - Remaja berbakat 15 tahun.">
-  <meta property="og:image" content="https://img1.pixhost.to/images/6963/618485907_levvihosting.jpg">
+  <meta property="og:image" content="https://files.catbox.moe/50kcs8.jpg">
   <style>
-    :root {
-      --bg-color: #0d1117;
-      --second-bg-color: #161b22;
-      --text-color: #c9d1d9;
-      --main-color: #00ff88;
-    }
-
-    html { scroll-behavior: smooth; }
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-    body {
-  background: url('https://img1.pixhost.to/images/6988/618746518_rizzhosting.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: var(--text-color);
+   :root {
+  --bg-color: #0d1117;
+  --second-bg-color: #161b22;
+  --text-color: #c9d1d9;
+  --main-color: #00ff88;
 }
-    #preloader {
-      background: var(--bg-color) url('https://i.gifer.com/ZZ5H.gif') no-repeat center center;
-      height: 100vh; width: 100%;
-      position: fixed; z-index: 999;
-    }
 
-    header {
-      position: fixed; top: 0; left: 0;
-      width: 100%;
-      padding: 20px 10%;
-      background: var(--second-bg-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-    }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
-      color: var(--main-color);
-      cursor: pointer;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: var(--bg-color);
+  background-image: url('https://img1.pixhost.to/images/6988/618746518_rizzhosting.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  background-attachment: scroll;
+  color: var(--text-color);
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
 
-    .navbar {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-    }
+#preloader {
+  background: var(--bg-color) url('https://i.gifer.com/ZZ5H.gif') no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
 
-    .navbar a {
-      font-size: 18px;
-      color: var(--text-color);
-      text-decoration: none;
-      position: relative;
-      transition: 0.3s;
-      padding: 5px 0;
-    }
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: var(--second-bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
 
-    .navbar a:hover,
-    .navbar a.active {
-      color: var(--main-color);
-    }
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: var(--main-color);
+  cursor: pointer;
+}
 
-    .navbar a::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 2px;
-      width: 0;
-      background-color: var(--main-color);
-      transition: 0.3s ease;
-    }
+.navbar {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
 
-    .navbar a:hover::after,
-    .navbar a.active::after {
-      width: 100%;
-    }
+.navbar a {
+  font-size: 18px;
+  color: var(--text-color);
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+  padding: 5px 0;
+}
 
-    .logo {
-      font-size: 25px;
-      font-weight: bold;
-      color: var(--main-color);
-    }
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
 
-    @media (max-width: 768px) {
-      .menu-toggle { display: block; z-index: 101; }
-      .navbar {
-        position: absolute;
-        top: 100%; right: 0;
-        background: var(--second-bg-color);
-        flex-direction: column;
-        align-items: flex-start;
-        width: 200px;
-        padding: 20px;
-        transform: translateX(100%);
-        transition: 0.3s ease;
-        box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
-      }
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--main-color);
+  transition: 0.3s ease;
+}
 
-      .navbar.active { transform: translateX(0); }
-      .navbar a { margin: 10px 0; }
-    }
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
 
-    section {
-      padding: 80px 10%;
-      scroll-margin-top: 80px;
-    }
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--main-color);
+}
 
-    .home {
-      display: flex;
-      align-items: center;
-      height: 100vh;
-      background: url('wallpaper.jpg') no-repeat center center/cover;
-    }
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    z-index: 101;
+  }
 
-    .home-content {
-      max-width: 600px;
-      background: rgba(0, 255, 136, 0.05);
-      border-left: 3px solid var(--main-color);
-      padding: 20px 25px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0, 255, 136, 0.15);
-    }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--second-bg-color);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+  }
 
-    .home-content h1, .home-content h3, .home-content p {
-      margin-bottom: 15px;
-    }
+  .navbar.active {
+    transform: translateX(0);
+  }
 
-    .home-content h3 span {
-      color: var(--main-color);
-    }
+  .navbar a {
+    margin: 10px 0;
+  }
+}
 
-    .btn-box {
-      display: inline-block;
-      padding: 12px 25px;
-      background: var(--main-color);
-      color: #000;
-      font-weight: bold;
-      border-radius: 30px;
-      text-decoration: none;
-      transition: 0.3s;
-      margin-top: 20px;
-    }
+section {
+  padding: 80px 10%;
+  scroll-margin-top: 80px;
+}
 
-    .btn-box:hover {
-      background: transparent;
-      border: 2px solid var(--main-color);
-      color: var(--main-color);
-    }
+.home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background: url('wallpaper.jpg') no-repeat center center/cover;
+}
 
-    .home-sci {
-      display: flex;
-      gap: 15px;
-      margin-top: 20px;
-    }
+.home-content {
+  max-width: 600px;
+  background: rgba(0, 255, 136, 0.05);
+  border-left: 3px solid var(--main-color);
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.15);
+}
 
-    .home-sci a {
-      width: 45px; height: 45px;
-      border: 2px solid var(--main-color);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--main-color);
-      transition: 0.3s;
-      text-decoration: none;
-    }
+.home-content h1,
+.home-content h3,
+.home-content p {
+  margin-bottom: 15px;
+}
 
-    .home-sci a:hover {
-      background: var(--main-color);
-      color: var(--bg-color);
-      transform: scale(1.1);
-    }
+.home-content h3 span {
+  color: var(--main-color);
+}
 
-    .sub-title {
-      font-size: 48px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
+.btn-box {
+  display: inline-block;
+  padding: 12px 25px;
+  background: var(--main-color);
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-top: 20px;
+}
 
-    .sub-title span {
-      color: var(--main-color);
-    }
+.btn-box:hover {
+  background: transparent;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+}
 
-    .about, .skills {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+.home-sci {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
 
-    .about-img img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
-    }
+.home-sci a {
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  transition: 0.3s;
+  text-decoration: none;
+}
 
-    .services-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.home-sci a:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+  transform: scale(1.1);
+}
 
-    .services-list div {
-      background: var(--second-bg-color);
-      padding: 20px;
-      border-radius: 10px;
-      border-left: 3px solid var(--main-color);
-      transition: 0.3s;
-    }
+.sub-title {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    .services-list div:hover {
-      background: var(--main-color);
-      color: #000;
-    }
+.sub-title span {
+  color: var(--main-color);
+}
 
-    .services-list div i {
-      font-size: 40px;
-      margin-bottom: 15px;
-      color: var(--main-color);
-    }
+.about,
+.skills {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    .services-list div:hover i {
-      color: #000;
-    }
+.about-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+}
 
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-    .contact-form {
-      flex: 1;
-    }
+.services-list div {
+  background: var(--second-bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 3px solid var(--main-color);
+  transition: 0.3s;
+}
 
-    .contact-form form input,
-    .contact-form form textarea {
-      width: 100%;
-      background: #1e242c;
-      color: var(--text-color);
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      margin-bottom: 15px;
-    }
+.services-list div:hover {
+  background: var(--main-color);
+  color: #000;
+}
 
-    .send {
-      background: var(--main-color);
-      color: #000;
-      font-weight: bold;
-      padding: 10px 25px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-    }
+.services-list div i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: var(--main-color);
+}
 
-    .contact-icons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+.services-list div:hover i {
+  color: #000;
+}
 
-    .contact-icons a {
-      font-size: 24px;
-      color: var(--main-color);
-      transition: 0.3s;
-    }
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
-    .contact-icons a:hover {
-      color: #fff;
-    }
+.contact-form {
+  flex: 1;
+}
 
-    .last-text {
-      text-align: center;
-      padding: 20px;
-      background: #0b0f15;
-      color: #888;
-    }
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  background: #1e242c;
+  color: var(--text-color);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
 
-    .top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-    }
+.send {
+  background: var(--main-color);
+  color: #000;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
 
-    .top i {
-      background: var(--main-color);
-      color: var(--bg-color);
-      padding: 10px;
-      border-radius: 50%;
-    }
+.last-text {
+  text-align: center;
+  padding: 20px;
+  background: #0b0f15;
+  color: #888;
+}
+
+.top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.top i {
+  background: var(--main-color);
+  color: var(--bg-color);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.contact-icons .social-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-icons .social-icon a {
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.contact-icons .social-icon span {
+  font-size: 14px;
+  color: var(--text-color);
+  margin-top: 5px;
+}
+
+.contact-icons .social-icon a:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+  transform: scale(1.1);
+}
   </style>
 </head>
 <body>
 <div id="preloader"></div>
 
-  <header class="header">
-    <div class="menu-toggle" id="menu-toggle">
-      <i class='bx bx-menu'></i>
-    </div>
-    <nav class="navbar" id="navbar">
-      <a href="#" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header class="header">
+  <div class="menu-toggle" id="menu-toggle">
+    <i class='bx bx-menu'></i>
+  </div>
+  <nav class="navbar" id="navbar">
+    <a href="#" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
   <section class="home">
     <div class="home-content glass-effect">
@@ -330,7 +389,7 @@
       <p>Portfolio sederhana yang di ciptakan oleh saya</p>
       <div class="home-sci">
         <a href="https://www.instagram.com/_rfiqiw?igsh=bDFoMGMzZG9pcnlm"><i class="bx bxl-instagram"></i></a>
-        <a href="https://wa.me/+6283131354890"><i class="bx bxl-whatsapp"></i></a>
+        <a href="https://wa.me/+6283177843144"><i class="bx bxl-whatsapp"></i></a>
         <a href="https://www.tiktok.com/@poualwayssolo?_t=ZS-8xlXAdPJHqJ&_r=1"><i class="bx bxl-tiktok"></i></a>
         <a href="https://t.me/Pouskibudi"><i class="bx bxl-telegram"></i></a>
       </div>
@@ -340,12 +399,22 @@
 
   <section class="about" id="about">
     <div class="about-img">
-      <img src="https://img1.pixhost.to/images/6963/618485907_levvihosting.jpg" alt="About Me">
+      <img src="https://files.catbox.moe/gprpsl.jpg" alt="About Me">
     </div>
     <div class="about-text glass-effect">
       <div class="sub-title">About <span>Me</span></div>
       <h4>Rafiqi Khairun Naz</h4>
-      <p>Halo! Gue Rafiqi Khairun Naz, biasa dipanggil Rafi. Umur gw masih 15 tahun, tapi udah ngulik dunia script bot WhatsApp dan ngoding website dari lama. Gw cuma anak rumahan yang doyan baca manhwa, nonton anime, sambil ngulik kodingan sampai subuh wkwk. Ngoding udah kayak hobi yang jadi candu, tiap error malah makin semangat cari solusinya 😎</p>
+      <p style="color: var(--main-color); line-height: 1.8;">
+  👋 Halo, nama saya <strong>Rafiqi Khairun Naz</strong>, biasa dipanggil <strong>Rafi</strong> atau <strong>Pou</strong> di dunia maya.<br><br>
+  
+  📅 Saya lahir pada bulan Februari 2010, dan sekarang berusia 15 tahun. Saya berasal dari Bandung, Jawa Barat dan sekeranh tinggal kabupaten Bandung.<br><br>
+  
+  🎓 Saat ini saya adalah siswa kelas 1 Madrasah Aliyah (setara dengan kelas 10 SMA).<br><br>
+  
+  💡 Hobi saya adalah mempelajari hal-hal baru terutama di bidang teknologi, coding, dan dunia digital. Saya juga suka membaca komik seperti manhwa, dan tentu saja nonton anime!<br><br>
+  
+  ❤️ Genre favorit? ROMANCE SCHOOL dong aw ah ah yameteh 😋
+</p>
       <a href="#contact" class="btn-box">Media sosial</a>
     </div>
   </section>
@@ -357,13 +426,13 @@
         <i class='bx bxs-bot'></i>
         <h2>Kamiya</h2>
         <p>Bot bug WhatsApp yang dirancang untuk merusak sistem</p>
-        <a href="https://wa.me/6283131354890" class="btn-box">Contact developer</a>
+        <a href="https://wa.me/6283177843144" class="btn-box">Contact developer</a>
       </div>
       <div>
         <i class='bx bxs-bot'></i>
         <h2>Kurohana</h2>
         <p>Bot bug WhatsApp yang dirancang untuk merusak sistem</p>
-        <a href="https://wa.me/6283131354890" class="btn-box">Contact developer</a>
+        <a href="https://wa.me/6283177843144" class="btn-box">Contact developer</a>
       </div>
     </div>
   </section>
@@ -378,30 +447,44 @@
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <div class="contact-text">
-      <div class="sub-title">Media Sosial <span>Me</span></div>
-      <h4>jangan ragu untuk menghubungi saya</h4>
-      <p>Click icon di bawah ini untuk menghubungi saya</p>
-      <div class="contact-icons">
+<section class="contact" id="contact">
+  <div class="contact-text">
+    <div class="sub-title">Media Sosial <span>Me</span></div>
+    <h4>jangan ragu untuk menghubungi saya</h4>
+    <p>Click icon di bawah ini untuk menghubungi saya</p>
+    <div class="contact-icons">
+      <div class="social-icon">
         <a href="https://www.instagram.com/_rfiqiw?igsh=bDFoMGMzZG9pcnlm"><i class="bx bxl-instagram"></i></a>
-        <a href="https://wa.me/+6283131354890"><i class="bx bxl-whatsapp"></i></a>
+        <span>Instagram</span>
+      </div>
+      <div class="social-icon">
+        <a href="https://wa.me/+6283177843144"><i class="bx bxl-whatsapp"></i></a>
+        <span>WhatsApp</span>
+      </div>
+      <div class="social-icon">
         <a href="https://www.tiktok.com/@poualwayssolo?_t=ZS-8xlXAdPJHqJ&_r=1"><i class="bx bxl-tiktok"></i></a>
+        <span>TikTok</span>
+      </div>
+      <div class="social-icon">
         <a href="https://t.me/Pouskibudi"><i class="bx bxl-telegram"></i></a>
+        <span>Telegram</span>
       </div>
-      </div>
-      <div class="contact-form">
-      <form action="" method="POST">
-        <input type="text" name="name" placeholder="Enter Your Name" required>
-        <input type="email" name="email" placeholder="Enter Your Email" required>
-        <input type="text" name="subject" placeholder="Enter Your Subject">
-        <textarea name="message" placeholder="Enter Your Message" required></textarea>
-        <input type="submit" value="Submit" class="send">
-      </form>
     </div>
-  </section>
-  <div class="last-text"><p>Create by Rafiqi khairun naz</p></div>
-  <a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
+  </div>
+  <div class="contact-form">
+    <form action="" method="POST">
+      <input type="text" name="name" placeholder="Enter Your Name" required>
+      <input type="email" name="email" placeholder="Enter Your Email" required>
+      <input type="text" name="subject" placeholder="Enter Your Subject">
+      <textarea name="message" placeholder="Enter Your Message" required></textarea>
+      <input type="submit" value="Submit" class="send">
+    </form>
+  </div>
+</section>
+
+<div class="last-text"><p>Create by Rafiqi khairun naz</p></div>
+<a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
+
 <script>
   const typed = new Typed(".text", {
     strings: [
